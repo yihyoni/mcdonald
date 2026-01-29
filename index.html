@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -160,7 +160,7 @@
       const itemsPerPage = 3; // 한 번에 표시할 (아이템 데이터) 수
 
       $("#more").click(function () {
-        $.get("https://kku-git.github.io/Mcdonald_menu/product.json").done(
+        $.get("https://yihyoni.github.io/Mcdonald_menu/product.json").done(
           function (data) {
             const maxItems = data.length; // 데이터의 총 길이
             const nextIndex = currentIndex + itemsPerPage; // 다음에 보여줄 데이터의 끝 인덱스
@@ -175,7 +175,7 @@
             const slicedData = data.slice(currentIndex, nextIndex);
             slicedData.forEach((a, i) => {
               // 이미지 URL 설정
-              const imageUrl = `https://kku-git.github.io/Mcdonald_menu/hamburger/hamburger${
+              const imageUrl = `https://yihyoni.github.io/Mcdonald_menu/hamburger/hamburger${
                 currentIndex + i + 1
               }.png`;
 
@@ -198,7 +198,7 @@
 
             // 인덱스 업데이트 (다음 번 클릭을 위한)
             currentIndex = nextIndex;
-          }
+          },
         );
       });
     </script>
